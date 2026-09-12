@@ -39,11 +39,11 @@
   const FAQS = [
     {
       q: 'Siapa penyelenggara ZAD SERIES?',
-      a: 'ZAD SERIES diselenggarakan secara mandiri oleh SMA ZAD International Quranic Boarding School (SMA ZAD IQBS) Cianjur, melibatkan seluruh elemen siswa dan sekolah.',
+      a: 'ZAD SERIES diselenggarakan secara mandiri oleh SMA ZAD International Quranic Boarding School (SMA ZAD IQBS) Cianjur.',
     },
     {
       q: 'Di mana lokasi pelaksanaan zad series?',
-      a: 'Seluruh rangkaian acara ZAD SERIES 2.0 dilaksanakan di lingkungan kampus SMA ZAD International Quranic Boarding School, Cianjur, Jawa Barat.',
+      a: 'Seluruh rangkaian acara ZAD SERIES 2.0 akan dilaksanakan di SMA ZAD IQBS, Jalan National 2, Cibeureum, Kec Cugenang, Kabupaten Cianjur, Jawa Barat 43252',
     },
     {
       q: 'Kapan pelaksanaan nya?',
