@@ -13,7 +13,7 @@
      ============================================================ */
   const COMPETITIONS = [
     { id: 'futsal',   title: 'futsal',   badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1NYAzoVr3Y3KIzko4cFVP427HqxuG1IcuzATRBFXQ5S8/preview?edit_requested=true' },
-    { id: 'basket',   title: 'basket',   badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1dEIyLsfUu1VZ4L5_jccIZNKYzoWwJK2tiaMi0IFYlWU/preview?edit_requested=true' },
+    { id: 'basket',   title: 'basket',   badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1OFeVYzD7bTWgM_vgFPjqmfqxt6ErytbjEzI3cg2iyJY/preview?edit_requested=true' },
     { id: 'ldbi',     title: 'LDBI',     badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1NTlOBKmNqxT19zi9dHdm9gc3zcYv_Wf2Z5tvM3VkIHs/preview?edit_requested=true' },
     { id: 'lccu',     title: 'LCCU',     badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1UgVlWMcf20rIiU_qgx2Xvp-2OPFQ7zpRvRSZjqE3Y0A/preview?edit_requested=true' },
     { id: 'khitobah', title: 'khitobah', badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1JPKjfCeBFNi0EmxGbw5itHodeWLeu-odnQRUuttjrf0/preview?edit_requested=true' },
