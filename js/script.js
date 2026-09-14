@@ -6,19 +6,20 @@
   /* ============================================================
      1. DATA
      ============================================================
+     image: path ke foto kompetisi (taruh file-nya di assets/images/).
      guideLink / registerLink: isi dengan URL asli per cabang lomba
      (Google Form, Linktree, PDF guidebook, dll). Biarkan '#' kalau
      link belum tersedia — tombol otomatis menampilkan toast
      "segera tersedia" selama nilainya masih '#'.
      ============================================================ */
   const COMPETITIONS = [
-    { id: 'futsal',   title: 'futsal',   badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1NYAzoVr3Y3KIzko4cFVP427HqxuG1IcuzATRBFXQ5S8/preview?edit_requested=true' },
-    { id: 'basket',   title: 'basket',   badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1OFeVYzD7bTWgM_vgFPjqmfqxt6ErytbjEzI3cg2iyJY/preview?edit_requested=true' },
-    { id: 'ldbi',     title: 'LDBI',     badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1NTlOBKmNqxT19zi9dHdm9gc3zcYv_Wf2Z5tvM3VkIHs/preview?edit_requested=true' },
-    { id: 'lccu',     title: 'LCCU',     badges: ['SMA', 'Putra', 'Beregu'],                guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1UgVlWMcf20rIiU_qgx2Xvp-2OPFQ7zpRvRSZjqE3Y0A/preview?edit_requested=true' },
-    { id: 'khitobah', title: 'khitobah', badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1JPKjfCeBFNi0EmxGbw5itHodeWLeu-odnQRUuttjrf0/preview?edit_requested=true' },
-    { id: 'speech',   title: 'speech',   badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1xjPXqN6peCoDyd-HFGCfCHKPRpCDmTxUrPTTnw1is20/preview?edit_requested=true' },
-    { id: 'mhq',      title: 'mhq',      badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1dEIyLsfUu1VZ4L5_jccIZNKYzoWwJK2tiaMi0IFYlWU/preview?edit_requested=true' },
+    { id: 'futsal',   title: 'futsal',   badges: ['SMA', 'Putra', 'Beregu'],                image: 'assets/images/Futsal.png',   guideLink: '#', registerLink: 'https://docs.google.com/forms/d/1xjPXqN6peCoDyd-HFGCfCHKPRpCDmTxUrPTTnw1is20/preview?edit_requested=true' },
+    { id: 'basket',   title: 'basket',   badges: ['SMA', 'Putra', 'Beregu'],                image: 'assets/images/Basket.png',   guideLink: '#', registerLink: '#' },
+    { id: 'ldbi',     title: 'LDBI',     badges: ['SMA', 'Putra', 'Beregu'],                image: 'assets/images/LDBI.png',     guideLink: '#', registerLink: '#' },
+    { id: 'lccu',     title: 'LCCU',     badges: ['SMA', 'Putra', 'Beregu'],                image: 'assets/images/LCCU.png',     guideLink: '#', registerLink: '#' },
+    { id: 'khitobah', title: 'khitobah', badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], image: 'assets/images/KHITOBAH.png', guideLink: '#', registerLink: '#' },
+    { id: 'speech',   title: 'speech',   badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], image: 'assets/images/SPEECH.png',   guideLink: '#', registerLink: '#' },
+    { id: 'mhq',      title: 'mhq',      badges: ['SMP/SMA Sederajat', 'Putra', 'Individu'], image: 'assets/images/MHQ.png',      guideLink: '#', registerLink: '#' },
   ];
 
   const BRACKETS = {
@@ -39,11 +40,11 @@
   const FAQS = [
     {
       q: 'Siapa penyelenggara ZAD SERIES?',
-      a: 'ZAD SERIES diselenggarakan secara mandiri oleh SMA ZAD International Quranic Boarding School (SMA ZAD IQBS) Cianjur.',
+      a: 'ZAD SERIES diselenggarakan secara mandiri oleh SMA ZAD International Quranic Boarding School (SMA ZAD IQBS) Cianjur, melibatkan seluruh elemen siswa dan sekolah.',
     },
     {
       q: 'Di mana lokasi pelaksanaan zad series?',
-      a: 'Seluruh rangkaian acara ZAD SERIES 2.0 akan dilaksanakan di SMA ZAD IQBS, Jalan National 2, Cibeureum, Kec Cugenang, Kabupaten Cianjur, Jawa Barat 43252',
+      a: 'Seluruh rangkaian acara ZAD SERIES 2.0 dilaksanakan di lingkungan kampus SMA ZAD International Quranic Boarding School, Cianjur, Jawa Barat.',
     },
     {
       q: 'Kapan pelaksanaan nya?',
@@ -68,7 +69,10 @@
       const registerAttrs = isRealLink(comp.registerLink) ? 'target="_blank" rel="noopener"' : '';
       return `
       <article class="card reveal" data-reveal="up">
-        <div class="card__image" role="img" aria-label="Gambar kompetisi ${comp.title}"></div>
+        <div class="card__image">
+          <img src="${comp.image}" alt="Gambar kompetisi ${comp.title}" loading="lazy"
+               onerror="this.closest('.card__image').classList.add('card__image--empty'); this.remove();">
+        </div>
         <h3 class="card__title font-display">${comp.title}</h3>
         <div class="card__badges">
           ${comp.badges.map((b) => `<span class="badge">${b}</span>`).join('')}

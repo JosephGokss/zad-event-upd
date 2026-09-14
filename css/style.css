@@ -109,10 +109,10 @@ body {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background-image: url('../assets/images/Overlay\ Background.png');
-  background-size: 1100px;
+  /* background-image: url('../assets/images/noise-texture.jpg'); */
+  background-size: 480px;
   mix-blend-mode: overlay;
-  opacity: 0.60;
+  opacity: 0.35;
 }
 
 .grain-overlay--2 {
@@ -120,7 +120,7 @@ body {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background-image: url('../assets/images/Overlay Background 2.jpg');
+  background-image: url('../assets/images/Overlay\ Background.png');
   background-size: 1100px;
   background-repeat: repeat;
   mix-blend-mode: overlay;
@@ -227,6 +227,14 @@ body {
   max-width: min(78vw, 780px);
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
 }
+.hero__text--for {
+  max-width: min(88vw, 980px);
+  margin-top: clamp(-2rem, -5vw, -1rem);
+  margin-left: clamp(0px, 4vw, 60px);
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+  position: relative;
+  z-index: 4;
+}
 .hero__guy {
   position: absolute;
   left: 33%;
@@ -235,12 +243,6 @@ body {
   z-index: 3;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
   animation: guyFloat 5s ease-in-out infinite;
-}
-.hero__text--for {
-  max-width: min(88vw, 980px);
-  margin-top: clamp(-2rem, -5vw, -1rem);
-  margin-left: clamp(0px, 4vw, 60px);
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
 }
 @keyframes guyFloat {
   0%, 100% { transform: translateY(0); }
@@ -261,30 +263,6 @@ body {
   10% { opacity: 0.8; }
   90% { opacity: 0.6; }
   100% { transform: translateY(-120vh) translateX(20px); opacity: 0; }
-}
-
-.hero__scroll {
-  position: absolute;
-  bottom: clamp(1.2rem, 3vw, 2.2rem);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 26px; height: 42px;
-  border: 2px solid var(--lavender);
-  border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  padding-top: 6px;
-}
-.hero__scroll span {
-  width: 4px; height: 8px;
-  border-radius: 2px;
-  background: var(--lavender-light);
-  animation: scrollDot 1.8s ease-in-out infinite;
-}
-@keyframes scrollDot {
-  0% { transform: translateY(0); opacity: 1; }
-  70% { transform: translateY(12px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 0; }
 }
 
 /* 8b. COUNTDOWN ----------------------------------------------- */
@@ -415,7 +393,7 @@ body {
 .stats {
   margin-top: clamp(1.75rem, 4vw, 2.75rem);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 .stat {
@@ -471,6 +449,17 @@ body {
   background-color: #d9d9d9;
 }
 .card__image img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.card__image--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, rgba(120, 90, 200, 0.25), rgba(20, 12, 45, 0.35));
+}
+.card__image--empty::after {
+  content: '🖼';
+  font-size: 1.6rem;
+  opacity: 0.5;
+}
 .card__title {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.2vw, 1.9rem);
