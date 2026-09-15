@@ -393,7 +393,7 @@ body {
 .stats {
   margin-top: clamp(1.75rem, 4vw, 2.75rem);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .stat {
@@ -425,7 +425,7 @@ body {
 /* 11. COMPETITIONS / CARDS --------------------------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(1rem, 2vw, 1.5rem);
 }
 .card {
@@ -500,12 +500,18 @@ body {
   color: #fff;
   box-shadow: 0 6px 16px rgba(90, 30, 170, 0.4);
 }
-.btn--guide:hover { filter: brightness(1.12); box-shadow: 0 10px 22px rgba(90, 30, 170, 0.55); }
+.btn--guide:hover {
+  filter: brightness(1.12); 
+  box-shadow: 0 10px 22px rgba(90, 30, 170, 0.55); 
+}
 .btn--register {
   background: linear-gradient(120deg, #ffffff, #c7c2d6);
   color: var(--purple-700);
 }
-.btn--register:hover { filter: brightness(1.05); box-shadow: 0 10px 22px rgba(0,0,0,0.25); }
+.btn--register:hover { 
+  filter: brightness(1.05); 
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25); 
+}
 
 /* 12. ANNOUNCEMENT / BRACKET -------------------------------------- */
 .bracket__scroll {
