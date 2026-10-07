@@ -235,6 +235,30 @@ body {
   position: relative;
   z-index: 4;
 }
+.hero__text {
+  position: relative;
+  transition: transform 0.4s var(--ease);
+}
+.hero__text::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(155,92,240,0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(183, 176, 201, 0.3);
+  border-radius: inherit;
+}
+.hero__text:hover {
+  transform: scale(1.02);
+}
+.hero__text:hover::after {
+  opacity: 1;
+  backdrop-filter: blur(10px) saturate(1.4);
+}
 .hero__guy {
   position: absolute;
   left: 33%;
@@ -363,6 +387,11 @@ body {
 .about__mascot {
   transform: rotate(-6deg);
   filter: drop-shadow(0 12px 30px rgba(90, 30, 160, 0.55));
+  animation: mascotGlow 4s ease-in-out infinite;
+}
+@keyframes mascotGlow {
+  0%, 100% { filter: drop-shadow(0 12px 30px rgba(90, 30, 160, 0.55)); }
+  50% { filter: drop-shadow(0 12px 45px rgba(155, 92, 240, 0.8)), 0 0 20px rgba(155, 92, 240, 0.3); }
 }
 .about__list {
   display: flex;
@@ -446,9 +475,21 @@ body {
 .card__image {
   aspect-ratio: 3/4;
   border-radius: 8px;
-  background-color: #d9d9d9;
+  background: linear-gradient(160deg, rgba(120, 90, 200, 0.15), rgba(20, 12, 45, 0.1));
+  overflow: hidden;
+  position: relative;
 }
-.card__image img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.card__image img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
+  filter: blur(18px);
+  transition: filter 0.7s ease, transform 0.5s ease;
+}
+.card__image img.is-loaded {
+  filter: blur(0);
+}
+.card:hover .card__image img.is-loaded {
+  transform: scale(1.05);
+}
 .card__image--empty {
   display: flex;
   align-items: center;

@@ -484,15 +484,33 @@
     }, true);
   }
 
-  /* ============================================================
-     INIT
-     ============================================================ */
-  document.addEventListener('DOMContentLoaded', () => {
-    renderCards();
-    renderBracket('futsal');
-    renderAccordion();
-    initBracketTabs();
-    initNavbar();
-    initReveal(); // re-run after dynamic content is in the DOM
-  });
+/* ============================================================
+      10. CARD IMAGE BLUR-TO-SHARP
+      ============================================================ */
+   function initCardImageLoad() {
+     const grid = document.getElementById('cards-grid');
+     if (!grid) return;
+     grid.querySelectorAll('.card__image img').forEach((img) => {
+       if (img.complete) {
+         img.classList.add('is-loaded');
+       } else {
+         img.addEventListener('load', () => img.classList.add('is-loaded'));
+         img.addEventListener('error', () => img.classList.add('is-loaded'));
+       }
+     });
+   }
+
+   /* ============================================================
+      11. INIT
+      ============================================================ */
+   document.addEventListener('DOMContentLoaded', () => {
+     renderCards();
+     renderBracket('futsal');
+     renderAccordion();
+     initBracketTabs();
+     initNavbar();
+     initCountdown();
+     initCardImageLoad();
+     initReveal();
+   });
 })();
