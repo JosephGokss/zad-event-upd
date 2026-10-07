@@ -45,36 +45,6 @@
   </a>
 </section>
 
-<!-- ===================== COUNTDOWN ===================== -->
-<section class="countdown-wrap" aria-label="Hitung mundur acara">
-  <div class="container">
-    <div class="countdown reveal" data-reveal="up" id="countdown" data-target="2026-10-18T00:00:00+07:00">
-      <p class="countdown__label">Festival dimulai dalam</p>
-      <div class="countdown__grid">
-        <div class="countdown__unit">
-          <span class="countdown__num" data-unit="days">00</span>
-          <span class="countdown__key">Hari</span>
-        </div>
-        <div class="countdown__sep">:</div>
-        <div class="countdown__unit">
-          <span class="countdown__num" data-unit="hours">00</span>
-          <span class="countdown__key">Jam</span>
-        </div>
-        <div class="countdown__sep">:</div>
-        <div class="countdown__unit">
-          <span class="countdown__num" data-unit="minutes">00</span>
-          <span class="countdown__key">Menit</span>
-        </div>
-        <div class="countdown__sep">:</div>
-        <div class="countdown__unit">
-          <span class="countdown__num" data-unit="seconds">00</span>
-          <span class="countdown__key">Detik</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== ABOUT ===================== -->
 <section class="section" id="about">
   <div class="banner">
@@ -197,6 +167,37 @@
 <button class="fab fab--top" id="back-to-top" aria-label="Kembali ke atas">
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
     <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- ===================== COUNTDOWN (kiri, bisa dibuka/tutup) ===================== -->
+<aside class="countdown is-open" id="countdown" data-target="2026-10-18T00:00:00+07:00" aria-label="Hitung mundur acara">
+  <div class="countdown__scroll">
+    <img src="assets/images/countdown-scroll.png" alt="" class="countdown__img">
+    <p class="countdown__label">Festival dimulai dalam</p>
+    <div class="countdown__unit countdown__unit--days">
+      <span class="countdown__num" data-unit="days">00</span>
+      <span class="countdown__key">Hari</span>
+    </div>
+    <div class="countdown__unit countdown__unit--hours">
+      <span class="countdown__num" data-unit="hours">00</span>
+      <span class="countdown__key">Jam</span>
+    </div>
+    <div class="countdown__unit countdown__unit--minutes">
+      <span class="countdown__num" data-unit="minutes">00</span>
+      <span class="countdown__key">Menit</span>
+    </div>
+    <div class="countdown__unit countdown__unit--seconds">
+      <span class="countdown__num" data-unit="seconds">00</span>
+      <span class="countdown__key">Detik</span>
+    </div>
+  </div>
+</aside>
+
+<button class="countdown-toggle" id="countdown-toggle" type="button" aria-controls="countdown" aria-expanded="true" aria-label="Sembunyikan hitung mundur">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+    <circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 8.5V13l3 2M9.5 2.8h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 </button>
 

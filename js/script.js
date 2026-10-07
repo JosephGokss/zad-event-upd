@@ -380,6 +380,7 @@
       seconds: el.querySelector('[data-unit="seconds"]'),
     };
     const pad = (n) => String(Math.max(n, 0)).padStart(2, '0');
+    let timer;
 
     function tick() {
       const diff = target - Date.now();
@@ -395,8 +396,22 @@
       nums.minutes.textContent = pad(Math.floor((s % 3600) / 60));
       nums.seconds.textContent = pad(s % 60);
     }
+
+    /* -- Tombol tampil / sembunyi -- */
+    const toggle = document.getElementById('countdown-toggle');
+    function setOpen(open) {
+      el.classList.toggle('is-open', open);
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Sembunyikan hitung mundur' : 'Tampilkan hitung mundur');
+      }
+    }
+    if (toggle) toggle.addEventListener('click', () => setOpen(!el.classList.contains('is-open')));
+    /* Default: terbuka di desktop, tertutup di layar kecil biar tidak menutupi konten */
+    setOpen(window.innerWidth >= 900);
+
     tick();
-    const timer = setInterval(tick, 1000);
+    timer = setInterval(tick, 1000);
   }
 
   /* ============================================================
