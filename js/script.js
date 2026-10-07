@@ -40,19 +40,19 @@
   const FAQS = [
     {
       q: 'Siapa penyelenggara ZAD SERIES?',
-      a: 'ZAD SERIES diselenggarakan secara mandiri oleh SMA ZAD International Quranic Boarding School (SMA ZAD IQBS) Cianjur, melibatkan seluruh elemen siswa dan sekolah.',
+      a: 'Penyelenggara ZAD SERIES adalah ZAD IQBS Cianjur.',
     },
     {
       q: 'Di mana lokasi pelaksanaan zad series?',
-      a: 'Seluruh rangkaian acara ZAD SERIES 2.0 dilaksanakan di lingkungan kampus SMA ZAD International Quranic Boarding School, Cianjur, Jawa Barat.',
+      a: 'ZAD SERIES akan dilaksanakan di SMA ZAD IQBS, Jalan National 2, Cibeureum, Kec Cugenang, Kabupaten Cianjur, Jawa Barat 43252.',
     },
     {
       q: 'Kapan pelaksanaan nya?',
-      a: 'Jadwal lengkap pelaksanaan akan diumumkan melalui akun Instagram resmi ZAD SERIES dan papan pengumuman sekolah menjelang hari pelaksanaan.',
+      a: 'ZAD SERIES akan dilaksanakan pada tanggal 18 - 23 Oktober 2026.',
     },
     {
       q: 'Ada kegiatan apa aja?',
-      a: 'ZAD SERIES 2.0 menghadirkan kompetisi futsal dan basket (Piala Mudir), lomba kreatif LDBI, LCCU, khitobah, speech, dan MHQ, talkshow inspiratif Zad Talk, serta area Bazaar kolaboratif.',
+      a: '<ul><li>PIALA MUDIR</li><li>Lomba Akademik</li><li>Zad Talk</li></ul><p>Dan masih banyak lagi kegiatan yang menarik!</p>',
     },
   ];
 
