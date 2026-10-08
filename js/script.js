@@ -528,4 +528,4 @@
      initCardImageLoad();
      initReveal();
    });
-})();
+})(); 
