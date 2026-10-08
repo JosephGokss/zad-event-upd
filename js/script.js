@@ -52,7 +52,7 @@
     },
     {
       q: 'Ada kegiatan apa aja?',
-      a: '<ul><li>PIALA MUDIR</li><li>Lomba Akademik</li><li>Zad Talk</li></ul><p>Dan masih banyak lagi kegiatan yang menarik!</p>',
+      a: '<ul><li>Piala Mudir</li><li>Lomba Akademik</li><li>Zad Talk</li></ul><p>Dan masih banyak lagi kegiatan yang menarik!</p>',
     },
   ];
 
