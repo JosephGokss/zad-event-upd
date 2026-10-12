@@ -48,7 +48,7 @@
     },
     {
       q: 'Kapan pelaksanaan nya?',
-      a: 'ZAD SERIES akan dilaksanakan pada tanggal 17 - 22 Oktober 2026.',
+      a: 'ZAD SERIES akan dilaksanakan pada tanggal 17 - 22 Desember 2026.',
     },
     {
       q: 'Ada kegiatan apa aja?',
